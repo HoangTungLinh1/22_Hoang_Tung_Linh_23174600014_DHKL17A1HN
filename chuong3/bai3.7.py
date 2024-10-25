@@ -19,17 +19,17 @@ print(np_weight)
 height_124 = np_baseball[123, 0]  
 print("\nChiều cao của vận động viên thứ 124:", height_124)
 
-average_height = np.mean(np_baseball[:, 0])
-average_weight = np.mean(np_weight)
-print("\nChiều cao trung bình:", average_height)
-print("Cân nặng trung bình:", average_weight)
+tong_height = np.mean(np_baseball[:, 0])
+tong_weight = np.mean(np_weight)
+print("\nChiều cao trung bình:", tong_height)
+print("Cân nặng trung bình:", tong_weight)
 
-correlation = np.corrcoef(np_baseball[:, 0], np_weight)[0, 1]
-if correlation > 0:
-    correlation_comment = "có tương quan thuận."
-elif correlation < 0:
-    correlation_comment = "có tương quan nghịch."
+su_tuong_quan = np.corrcoef(np_baseball[:, 0], np_weight)[0, 1]
+if su_tuong_quan > 0:
+    danh_gia_tuong_quan = "có tương quan thuận."
+elif su_tuong_quan < 0:
+    danh_gia_tuong_quan = "có tương quan nghịch."
 else:
-    correlation_comment = "không có tương quan."
+    danh_gia_tuong_quan = "không có tương quan."
 
-print(f"\nMối tương quan giữa chiều cao và cân nặng: {correlation_comment} (Hệ số tương quan: {correlation:.2f})")
+print(f"\nMối tương quan giữa chiều cao và cân nặng: {danh_gia_tuong_quan} (Hệ số tương quan: {su_tuong_quan:.2f})")
