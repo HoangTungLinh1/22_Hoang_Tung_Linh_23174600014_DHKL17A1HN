@@ -1,11 +1,13 @@
 import json
 class JSONReader:
+    #Đọc tập Jison
     def __init__(self, file_path):
         self.file_path = file_path
         self.data = None
     def read_json(self):
         with open(self.file_path, 'r') as file:
             self.data = json.load(file)
+    #Hiển thị dữ liệu        
     def display_data(self):
         if self.data:
             for user in self.data:
