@@ -1,11 +1,13 @@
 import xml.etree.ElementTree as ET
 class XMLReader:
+    #Đọc tệp XML
     def __init__(self, file_path):
         self.file_path = file_path
         self.data = None
     def read_xml(self):
         tree = ET.parse(self.file_path)
         self.data = tree.getroot()
+    #Hiển thị dữ liệu
     def display_data(self):
         if self.data:
             for product in self.data.findall('product'):
